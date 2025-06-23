@@ -24,6 +24,7 @@ Run the Python script:
 python Task2.py
 A file named sample_report.pdf will be generated in the same directory.
 [sample_report.pdf](https://github.com/user-attachments/files/20857822/sample_report.pdf)
+![Image](https://github.com/user-attachments/assets/0c3ef1ec-f11c-49ff-b6dd-633ed3d39bf6)
 
 📊 Sample CSV Format
 Ensure your CSV (codetechtask.csv) is structured like this:
