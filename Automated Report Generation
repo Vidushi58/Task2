@@ -1,0 +1,32 @@
+import pandas as pd
+
+# Read data
+df = pd.read_csv('codetechtask.csv')
+
+# Example analysis: average score
+average_score = df['Score'].mean()
+topper = df.loc[df['Score'].idxmax()]
+
+from fpdf import FPDF
+
+class PDF(FPDF):
+    def header(self):
+        self.set_font("Arial", "B", 16)
+        self.cell(0, 10, "Student Performance Report", 0, 1, "C")
+
+pdf = PDF()
+pdf.add_page()
+pdf.set_font("Arial", "", 12)
+
+# Write table
+pdf.cell(0, 10, "Data:", ln=True)
+for index, row in df.iterrows():
+    pdf.cell(0, 10, f"{row['Name']} - Score: {row['Score']} - Grade: {row['Grade']}", ln=True)
+
+# Summary
+pdf.ln(10)
+pdf.cell(0, 10, f"Average Score: {average_score:.2f}", ln=True)
+pdf.cell(0, 10, f"Topper: {topper['Name']} with {topper['Score']} marks", ln=True)
+
+# Save the report
+pdf.output("sample_report.pdf")
