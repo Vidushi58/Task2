@@ -23,6 +23,7 @@ Place your codetechtask.csv file in the same directory as the script.
 Run the Python script:
 python Task2.py
 A file named sample_report.pdf will be generated in the same directory.
+[sample_report.pdf](https://github.com/user-attachments/files/20857822/sample_report.pdf)
 
 📊 Sample CSV Format
 Ensure your CSV (codetechtask.csv) is structured like this:
